@@ -56,15 +56,25 @@ class Application(ScreenFunctions):
             translation = requests.get(url='https://api.dictionaryapi.dev/api/v2/entries/en/'+word_to_search).json()[0]["meanings"]
         except:
             translation = ""
+        
+        
         self.textarea.config(state=NORMAL)
         self.textarea.delete('1.0', END)
-        for definition in translation:
-            #print(str(definition["definitions"][0]["definition"]))
-            self.textarea.insert(INSERT, str(definition["definitions"][0]["definition"])+"\n")
+        for definitions in translation:
+            self.textarea.insert(INSERT, "--------------------------------"+str(definitions["partOfSpeech"]).upper()+"--------------------------------"+"\n")
+            for definition in definitions["definitions"]:
+                self.textarea.insert(INSERT, str(definition["definition"])+"\n")
+                try:
+                    self.textarea.insert(INSERT, "SENTENCE: "+str(definition["example"])+"\n")
+                    self.textarea.insert(INSERT,"\n\n")
+                except:
+                    pass
+            self.textarea.insert(INSERT,"\n\n\n")
+
 
 
     def load_text_area(self):
-        self.textarea = ScrolledText(self.vocabulary_window)
+        self.textarea = ScrolledText(self.vocabulary_window,foreground='black',background="#E8D89D")
         self.textarea.config(state=DISABLED)
         self.textarea.place(relx=0.007, rely=0.09, relwidth=0.98, relheight=0.65)
         
