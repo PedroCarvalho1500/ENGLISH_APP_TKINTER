@@ -5,6 +5,7 @@ import pandas
 import random
 import grammar
 import vocabulary
+import pronunciation
 
 BACKGROUND_COLOR = "#B1DDC6"
 timer = None
@@ -38,6 +39,13 @@ class ScreenFunctions():
         new_screen = vocabulary.Application(vocabulary_screen)
 
 
+    def openPronunciationPage(self):
+        self.main_window.destroy()
+        pronunciation_screen = Tk()
+        new_screen = pronunciation.Application(pronunciation_screen)
+
+
+
 class DB_Actions():
     def __init__(self):
         pass
@@ -62,6 +70,13 @@ class DB_Actions():
                 explanation VARCHAR(100000) NOT NULL
                 )""")
                 
+        self.cursor.execute(""" CREATE TABLE IF NOT EXISTS pronunciation (
+                id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                word VARCHAR(100) UNIQUE NOT NULL,
+                audio BLOB NOT NULL
+                )""")
+
+
         self.conn.commit()
         print("DATABASE CREATED!!!")
         self.disconnect_db()
@@ -147,7 +162,8 @@ class Application(ScreenFunctions):
 
         self.button_functions = {
             "Grammar": lambda: self.openGrammarPage(),
-            "Vocabulary": lambda: self.openVocabularyPage()
+            "Vocabulary": lambda: self.openVocabularyPage(),
+            "Pronunciation": lambda: self.openPronunciationPage()
         }
 
         self.main_window = window

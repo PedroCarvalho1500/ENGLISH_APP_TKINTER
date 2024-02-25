@@ -8,7 +8,7 @@ import random
 import main
 import requests
 
-BACKGROUND_COLOR = "#272426"
+BACKGROUND_COLOR = "#403E3E"
 timer = None
 current_french_word = ""
 
@@ -74,7 +74,7 @@ class Application(ScreenFunctions):
 
 
     def load_text_area(self):
-        self.textarea = ScrolledText(self.vocabulary_window,foreground='black',background="#E8D89D")
+        self.textarea = ScrolledText(self.vocabulary_window,foreground='black',background="#F8F3EA")
         self.textarea.config(state=DISABLED)
         self.textarea.place(relx=0.007, rely=0.09, relwidth=0.98, relheight=0.65)
         
