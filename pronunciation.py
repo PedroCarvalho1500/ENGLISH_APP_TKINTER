@@ -183,15 +183,12 @@ class Application(ScreenFunctions):
 
     def play_audio(self,id):
         sound_to_play = self.get_sound(id)
-        #song = AudioSegment.from_file(io.BytesIO(sound_to_play), format="mp3")
+        song = AudioSegment.from_file(io.BytesIO(sound_to_play), format="mp3")
+        play(song)
         #print(song)
         #song = mixer.music.load(sound_to_play)
         #mixer.music.play(song)
-        mp3 = Mpg123()
-        mp3.feed(sound_to_play.read())
-        out = Out123()
-        for frame in mp3.iter_frames(out.start):
-            out.play(frame)
+
         #sound = mixer.Sound(song)
 
 if __name__ == '__main__':
