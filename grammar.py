@@ -70,7 +70,7 @@ class Application(ScreenFunctions):
         self.db_obj = DB_Actions()
         self.grammar_window.title("ENGLISH APP")
         self.grammar_window.config(background=BACKGROUND_COLOR, height=728, width=1200)
-        self.grammar_window.resizable(False,False)
+        self.grammar_window.resizable(True,True)
         self.id = 1
         self.current_eg = self.get_current_eg(self.id)
         self.number_rows = self.db_obj.get_number_of_rows()

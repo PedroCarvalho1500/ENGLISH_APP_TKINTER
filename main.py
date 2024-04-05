@@ -73,7 +73,8 @@ class DB_Actions():
         self.cursor.execute(""" CREATE TABLE IF NOT EXISTS pronunciation (
                 id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                 word VARCHAR(100) UNIQUE NOT NULL,
-                audio BLOB NOT NULL
+                audio BLOB NOT NULL,
+                meaning VARCHAR(1000) NOT NULL
                 )""")
 
 

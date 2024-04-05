@@ -1,4 +1,5 @@
 import io
+import os
 import sqlite3
 import time
 from tkinter import *
@@ -9,9 +10,6 @@ import main
 from pygame import mixer
 from pydub import AudioSegment
 from pydub.playback import play
-from gtts import gTTS
-from io import BytesIO
-from mpg123 import Mpg123, Out123
 
 BACKGROUND_COLOR = "#272426"
 timer = None
@@ -40,7 +38,7 @@ class DB_Actions():
 
             
     def disconnect_db(self):
-        print("DATABASE DISCONNECTED!!!")
+        #print("DATABASE DISCONNECTED!!!")
         self.conn.close()
 
     def get_complete_example(self,id):
@@ -89,6 +87,13 @@ class DB_Actions():
         number = int(self.cursor.execute("""SELECT COUNT(*) FROM pronunciation;""").fetchone()[0])
         return number
 
+    def get_meaning(self,id):
+        self.connect_db()
+        meaning = self.cursor.execute(""" SELECT * FROM pronunciation WHERE id=?""", [id]).fetchall()
+        self.conn.commit()
+
+        self.disconnect_db()
+        return meaning[0][3]
     
 
 
@@ -99,10 +104,11 @@ class Application(ScreenFunctions):
         self.db_obj = DB_Actions()
         self.pronunciation_window.title("PRONUNCIATION WINDOW")
         self.pronunciation_window.config(background=BACKGROUND_COLOR, height=728, width=1200)
-        self.pronunciation_window.resizable(False,False)
+        self.pronunciation_window.resizable(True,True)
         self.id = 1
         self.current_word = self.get_current_word(self.id)
         self.complete_example = self.get_complete_example(self.id)
+        self.current_meaning = self.get_current_meaning(self.id)
         self.number_rows = self.db_obj.get_number_of_rows()
         self.load_card()
         self.load_buttons()
@@ -113,7 +119,7 @@ class Application(ScreenFunctions):
     def refresh_front_card(self):
         self.flashcard_canvas.itemconfig(self.image_front, image=self.my_flashcard_image)
         self.flashcard_canvas.itemconfig(self.canvas_example,text="Word",font=("Arial", 30, 'italic'))
-
+        self.flashcard_canvas.itemconfig(self.meaning_text,text=self.current_meaning,font=("Arial", 12, 'italic'))
 
     def next_eg(self):
         if self.id == self.number_rows:
@@ -123,8 +129,9 @@ class Application(ScreenFunctions):
             self.id+=1
             self.complete_example = self.get_complete_example(self.id)
             self.current_word = self.get_current_word(self.id)
-            self.refresh_front_card()
+            self.current_meaning = self.get_current_meaning(self.id)
             self.flashcard_canvas.itemconfig(self.canvas_text, text=str(self.current_word))
+            self.refresh_front_card()
 
 
     def previous_eg(self):
@@ -135,9 +142,9 @@ class Application(ScreenFunctions):
             self.id-=1
             self.complete_example = self.get_complete_example(self.id)
             self.current_word = self.get_current_word(self.id)
-            self.refresh_front_card()
+            self.current_meaning = self.get_current_meaning(self.id)
             self.flashcard_canvas.itemconfig(self.canvas_text, text=str(self.current_word))
-
+            self.refresh_front_card()
 
     def load_buttons(self):
         self.previous_button_image= PhotoImage(file='images/back_button.png', width=35, height=38)
@@ -166,7 +173,12 @@ class Application(ScreenFunctions):
         self.image_front = self.flashcard_canvas.create_image(400,270,image=self.my_flashcard_image)
         self.canvas_text = self.flashcard_canvas.create_text(400,263,text=str(self.current_word),font=("Arial", 26, 'bold'))
         self.canvas_example = self.flashcard_canvas.create_text(400,80,text="Word",font=("Arial", 30, 'italic'))
+        self.meaning_text = self.flashcard_canvas.create_text(400,420,text=self.current_meaning,font=("Arial", 12, 'italic'))
         self.flashcard_canvas.place(relx=0.19, rely=0.07, relwidth=0.8, relheight=0.8)
+
+    def get_current_meaning(self,id):
+        obj = self.db_obj.get_meaning(id)
+        return obj
 
 
     def get_current_word(self,id):
@@ -184,12 +196,13 @@ class Application(ScreenFunctions):
     def play_audio(self,id):
         sound_to_play = self.get_sound(id)
         song = AudioSegment.from_file(io.BytesIO(sound_to_play), format="mp3")
-        play(song)
-        #print(song)
-        #song = mixer.music.load(sound_to_play)
-        #mixer.music.play(song)
-
-        #sound = mixer.Sound(song)
+        song.export('audio.mp3')
+        mixer.music.load('audio.mp3')
+        mixer.music.play(loops=1)
+        try:
+            os.system('rm -rf audio.mp3')
+        except:
+            os.system('del audio.mp3')
 
 if __name__ == '__main__':
     new_window = Tk()
