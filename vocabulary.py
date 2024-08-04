@@ -40,6 +40,7 @@ class Application(ScreenFunctions):
         self.vocabulary_window.title("ENGLISH APP")
         self.vocabulary_window.config(background=BACKGROUND_COLOR, height=728, width=1200)
         self.vocabulary_window.resizable(False,False)
+        icon = main.InsertIcon(self.vocabulary_window)
         self.load_text_area()
         self.load_input_field()
         self.load_buttons()

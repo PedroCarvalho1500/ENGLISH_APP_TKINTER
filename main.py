@@ -6,6 +6,7 @@ import random
 import grammar
 import vocabulary
 import pronunciation
+import listening
 
 BACKGROUND_COLOR = "#B1DDC6"
 timer = None
@@ -19,7 +20,7 @@ time_passed = 0
 folders_created = []
 buttons_list = []
 
-buttons_titles = ["Grammar", "Reading", "Adverb", "Vocabulary", "Listening", "Preposition", "Pronunciation", "Writing", "Conjunction", "Culture", "Noun", "Pronoun", "Idioms", "Adjective", "Interjection", "Phrasal Verbs", "Verb", "Tenses"]
+buttons_titles = ["Grammar", "Reading", "Adverb", "Vocabulary", "Listening", "Preposition", "Pronunciation", "Writing", "Conjunction", "Images", "Noun", "Pronoun", "Idioms", "Adjective", "Interjection", "Phrasal Verbs", "Verb", "Tenses"]
 
 
 
@@ -43,6 +44,11 @@ class ScreenFunctions():
         self.main_window.destroy()
         pronunciation_screen = Tk()
         new_screen = pronunciation.Application(pronunciation_screen)
+
+    def openListeningPage(self):
+        self.main_window.destroy()
+        listening_screen = Tk()
+        new_screen = listening.Application(listening_screen)
 
 
 
@@ -77,6 +83,12 @@ class DB_Actions():
                 meaning VARCHAR(1000) NOT NULL
                 )""")
 
+        self.cursor.execute(""" CREATE TABLE IF NOT EXISTS listening (
+                id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                title VARCHAR(100) NOT NULL,
+                audio BLOB NOT NULL,
+                transcription VARCHAR(10000000) NOT NULL
+                )""")
 
         self.conn.commit()
         print("DATABASE CREATED!!!")
@@ -157,6 +169,11 @@ class DB_Actions():
 #         window.after(3000, change_to_back_card, flashcard_canvas, window, new_image)
 
 
+class InsertIcon():
+    def __init__(self,window) -> None:
+        window.iconphoto(False,PhotoImage(file='english.png'))
+
+
 class Application(ScreenFunctions):
     def __init__(self, window):
 
@@ -164,16 +181,19 @@ class Application(ScreenFunctions):
         self.button_functions = {
             "Grammar": lambda: self.openGrammarPage(),
             "Vocabulary": lambda: self.openVocabularyPage(),
-            "Pronunciation": lambda: self.openPronunciationPage()
+            "Pronunciation": lambda: self.openPronunciationPage(),
+            "Listening": lambda: self.openListeningPage()
         }
 
         self.main_window = window
         self.main_window.title("ENGLISH APP")
+        icon = InsertIcon(self.main_window)
         self.main_window.config(background=BACKGROUND_COLOR, height=728, width=1200)
         self.main_window.resizable(True,True)
         self.load_buttons()
         #self.load_textarea_to_mark_words()
         #self.load_timer_element()
+        #self.main_window.iconphoto(False,PhotoImage(file='english.png'))
         self.main_window.mainloop()
 
 

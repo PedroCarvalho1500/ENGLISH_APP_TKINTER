@@ -101,6 +101,7 @@ class Application(ScreenFunctions):
     def __init__(self, window):
         mixer.init()
         self.pronunciation_window = window
+        icon = main.InsertIcon(self.pronunciation_window)
         self.db_obj = DB_Actions()
         self.pronunciation_window.title("PRONUNCIATION WINDOW")
         self.pronunciation_window.config(background=BACKGROUND_COLOR, height=728, width=1200)
@@ -113,6 +114,7 @@ class Application(ScreenFunctions):
         self.load_card()
         self.load_buttons()
         
+        
         self.pronunciation_window.mainloop()
 
 
@@ -121,9 +123,15 @@ class Application(ScreenFunctions):
         self.flashcard_canvas.itemconfig(self.canvas_example,text="Word",font=("Arial", 30, 'italic'))
         self.flashcard_canvas.itemconfig(self.meaning_text,text=self.current_meaning,font=("Arial", 12, 'italic'))
 
-    def next_eg(self):
-        if self.id == self.number_rows:
-            tkinter.messagebox.showinfo("MAX NUMBER REACHED",  "This is the last Word!")
+    def next_eg(self,event=None):
+        if self.id == (self.number_rows-1):
+            self.id = 1
+            self.complete_example = self.get_complete_example(self.id)
+            self.current_word = self.get_current_word(self.id)
+            self.current_meaning = self.get_current_meaning(self.id)
+            self.flashcard_canvas.itemconfig(self.canvas_text, text=str(self.current_word))
+            self.refresh_front_card()
+            
         
         else:
             self.id+=1
@@ -134,9 +142,14 @@ class Application(ScreenFunctions):
             self.refresh_front_card()
 
 
-    def previous_eg(self):
+    def previous_eg(self,event=None):
         if self.id == 1:
-            tkinter.messagebox.showinfo("MINIMUM NUMBER REACHED",  "This is the First Word!")
+            self.id = self.number_rows-1
+            self.complete_example = self.get_complete_example(self.id)
+            self.current_word = self.get_current_word(self.id)
+            self.current_meaning = self.get_current_meaning(self.id)
+            self.flashcard_canvas.itemconfig(self.canvas_text, text=str(self.current_word))
+            self.refresh_front_card()
         
         else:
             self.id-=1
@@ -145,6 +158,19 @@ class Application(ScreenFunctions):
             self.current_meaning = self.get_current_meaning(self.id)
             self.flashcard_canvas.itemconfig(self.canvas_text, text=str(self.current_word))
             self.refresh_front_card()
+
+
+    def play_audio(self,id,event=None):
+        sound_to_play = self.get_sound(id)
+        song = AudioSegment.from_file(io.BytesIO(sound_to_play), format="mp3")
+        song.export('audio.mp3')
+        mixer.music.load('audio.mp3')
+        mixer.music.play(loops=1)
+        try:
+            os.system('rm -rf audio.mp3')
+        except:
+            os.system('del audio.mp3')
+
 
     def load_buttons(self):
         self.previous_button_image= PhotoImage(file='images/back_button.png', width=35, height=38)
@@ -161,6 +187,10 @@ class Application(ScreenFunctions):
 
         self.back_button = Button(self.pronunciation_window,text='Back to Menu', border=2, bg="#CC1705", font=('verdana', 10, 'bold'), activebackground='#108ecb' ,activeforeground='white', command=self.openMainPage)
         self.back_button.place(relx=0.43, rely=0.9, relwidth=0.2, relheight=0.1)
+
+        self.pronunciation_window.bind('<Right>', self.next_eg)
+        self.pronunciation_window.bind('<Left>', self.previous_eg)
+        self.pronunciation_window.bind('<space>', lambda event: self.play_audio(self.complete_example[0][0]))
 
 
     def load_card(self):
@@ -193,16 +223,6 @@ class Application(ScreenFunctions):
         obj = self.db_obj.get_audio(id)
         return obj
 
-    def play_audio(self,id):
-        sound_to_play = self.get_sound(id)
-        song = AudioSegment.from_file(io.BytesIO(sound_to_play), format="mp3")
-        song.export('audio.mp3')
-        mixer.music.load('audio.mp3')
-        mixer.music.play(loops=1)
-        try:
-            os.system('rm -rf audio.mp3')
-        except:
-            os.system('del audio.mp3')
 
 if __name__ == '__main__':
     new_window = Tk()
