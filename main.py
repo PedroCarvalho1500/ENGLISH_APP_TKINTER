@@ -51,11 +51,11 @@ class ScreenFunctions():
         listening_screen = Tk()
         new_screen = listening.Application(listening_screen)
 
+
     def openImagePage(self):
         self.main_window.destroy()
         image_screen = Tk()
         new_screen = image.Application(image_screen)
-
 
 
 class DB_Actions():
@@ -95,7 +95,7 @@ class DB_Actions():
                 audio BLOB NOT NULL,
                 transcription VARCHAR(10000000) NOT NULL
                 )""")
-        
+
         self.cursor.execute(""" CREATE TABLE IF NOT EXISTS image (
                 id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                 image BLOB NOT NULL,
@@ -197,6 +197,9 @@ class Application(ScreenFunctions):
             "Pronunciation": lambda: self.openPronunciationPage(),
             "Listening": lambda: self.openListeningPage(),
             "Images": lambda: self.openImagePage()
+
+
+
         }
 
         self.main_window = window

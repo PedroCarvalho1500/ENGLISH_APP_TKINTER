@@ -144,7 +144,9 @@ class Application(ScreenFunctions):
         self.flashcard_canvas.itemconfig(self.meaning_text,text=self.current_meaning,font=("Arial", 12, 'italic'))
 
     def next_eg(self,event=None):
-        if self.id == (self.number_rows):
+
+
+        if self.id == (self.number_rows-1):
             self.id = 1
             self.complete_example = self.get_complete_example(self.id)
             self.current_word = self.get_current_word(self.id)
@@ -164,7 +166,8 @@ class Application(ScreenFunctions):
 
     def previous_eg(self,event=None):
         if self.id == 1:
-            self.id = self.number_rows
+
+            self.id = self.number_rows-1
             self.complete_example = self.get_complete_example(self.id)
             self.current_word = self.get_current_word(self.id)
             self.current_meaning = self.get_current_meaning(self.id)
