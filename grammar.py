@@ -11,15 +11,6 @@ timer = None
 current_french_word = ""
 
 time_passed = 0
-#data_words = pandas.read_csv("data/french_words.csv")
-#to_learn = data_words.to_dict(orient="records")
-#words_to_learn_data = ""
-#words_to_learn_dict_list = to_learn
-folders_created = []
-buttons_list = []
-
-buttons_titles = ["Grammar", "Reading", "Adverb", "Vocabulary", "Listening", "Preposition", "Pronunciation", "Writing", "Conjunction", "Culture", "Noun", "Pronoun", "Idioms", "Adjective", "Interjection", "Phrasal Verbs", "Verb", "Tenses"]
-
 
 
 class ScreenFunctions():
