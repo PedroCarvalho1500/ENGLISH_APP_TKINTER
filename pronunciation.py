@@ -146,7 +146,7 @@ class Application(ScreenFunctions):
     def next_eg(self,event=None):
 
 
-        if self.id == (self.number_rows-1):
+        if self.id == (self.number_rows):
             self.id = 1
             self.complete_example = self.get_complete_example(self.id)
             self.current_word = self.get_current_word(self.id)
@@ -167,7 +167,7 @@ class Application(ScreenFunctions):
     def previous_eg(self,event=None):
         if self.id == 1:
 
-            self.id = self.number_rows-1
+            self.id = self.number_rows
             self.complete_example = self.get_complete_example(self.id)
             self.current_word = self.get_current_word(self.id)
             self.current_meaning = self.get_current_meaning(self.id)

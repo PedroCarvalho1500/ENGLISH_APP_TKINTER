@@ -8,6 +8,7 @@ import vocabulary
 import pronunciation
 import listening
 import image
+import phrases
 
 BACKGROUND_COLOR = "#B1DDC6"
 timer = None
@@ -56,6 +57,11 @@ class ScreenFunctions():
         self.main_window.destroy()
         image_screen = Tk()
         new_screen = image.Application(image_screen)
+
+    def openPhrasesPage(self):
+        self.main_window.destroy()
+        phrases_screen = Tk()
+        new_screen = phrases.Application(phrases_screen)
 
 
 class DB_Actions():
@@ -196,10 +202,8 @@ class Application(ScreenFunctions):
             "Vocabulary": lambda: self.openVocabularyPage(),
             "Pronunciation": lambda: self.openPronunciationPage(),
             "Listening": lambda: self.openListeningPage(),
-            "Images": lambda: self.openImagePage()
-
-
-
+            "Images": lambda: self.openImagePage(),
+            "Phrasal Verbs": lambda: self.openPhrasesPage()
         }
 
         self.main_window = window

@@ -1,0 +1,5 @@
+-- database: ./english.db
+
+SELECT DISTINCT prepositions.word,verb_prep.meaning FROM verb_prep 
+INNER JOIN prepositions
+INNER JOIN verbs ON verb_prep.verb_id = 2 AND verb_prep.prep_id = prepositions.id;
