@@ -93,10 +93,15 @@ class DB_Actions():
 class Application(ScreenFunctions):
     def __init__(self, window):
         self.phrases = window
+        width = 1500
+        height = 728
+        x_position = 100
+        y_position = 150
+        self.phrases.geometry(f"{width}x{height}+{x_position}+{y_position}")
         icon = main.InsertIcon(self.phrases)
         self.db_obj = DB_Actions()
         self.phrases.title("PHRASES WINDOW")
-        self.phrases.config(background=BACKGROUND_COLOR, height=728, width=1200)
+        self.phrases.config(background=BACKGROUND_COLOR)
         self.phrases.resizable(True,True)
         self.id = 1
         self.number_rows = self.db_obj.get_number_of_rows()
@@ -107,7 +112,7 @@ class Application(ScreenFunctions):
 
     def create_button(self,name, screen, text, border, bg, font, activebackground ,activeforeground, command, x, y):
         name = Button(screen, text=text, border=border, bg="white", font=font, activebackground="green" ,activeforeground="black", command=lambda: self.openPhrasePage(text))
-        name.place(relx=x, rely=y, relwidth=0.2, relheight=0.1)
+        name.place(relx=x, rely=y, relwidth=0.06, relheight=0.08)
         buttons_list.append(name)
         
         #input(f'{buttons_list}')
@@ -127,7 +132,7 @@ class Application(ScreenFunctions):
             #folders_created.append(folder)
             self.create_button(folder, self.phrases, folder, 2, "black", ('verdana', 10, 'bold'), 'white' ,'white', str(folder),x,y)
             
-            x+=0.3
+            x+=0.07
             if(x >= 0.85):
                 x = 0.05
                 y+=0.14

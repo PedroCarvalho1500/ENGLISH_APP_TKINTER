@@ -206,10 +206,16 @@ class Application(ScreenFunctions):
             "Phrasal Verbs": lambda: self.openPhrasesPage()
         }
 
+        
         self.main_window = window
+        width = 1200
+        height = 728
+        x_position = 100
+        y_position = 150
+        self.main_window.geometry(f"{width}x{height}+{x_position}+{y_position}")
         self.main_window.title("ENGLISH APP")
         icon = InsertIcon(self.main_window)
-        self.main_window.config(background=BACKGROUND_COLOR, height=728, width=1200)
+        self.main_window.config(background=BACKGROUND_COLOR)
         self.main_window.resizable(True,True)
         self.load_buttons()
         #self.load_textarea_to_mark_words()

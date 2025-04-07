@@ -65,13 +65,20 @@ class Application(ScreenFunctions):
     def __init__(self, window, verb_list):
         mixer.init()
         self.specific_phrases = window
+        self.specific_phrases = window
+        width = 1200
+        height = 728
+        x_position = 100
+        y_position = 150
+        self.specific_phrases.geometry(f"{width}x{height}+{x_position}+{y_position}")
         icon = main.InsertIcon(self.specific_phrases)
         self.db_obj = DB_Actions()
         self.verb_list = verb_list
         self.specific_phrases.title("PHRASES FOR VERB "+str(self.verb_list[1])+" WINDOW")
-        self.specific_phrases.config(background=BACKGROUND_COLOR, height=728, width=1200)
+        self.specific_phrases.config(background=BACKGROUND_COLOR)
         self.specific_phrases.resizable(True,True)
-        
+        self.specific_phrases.x_position = 1200
+
         self.load_text_area()
         self.load_buttons()
         self.fill_up_text_area()
