@@ -3,7 +3,7 @@ import time
 from tkinter import *
 import tkinter.messagebox
 from tkinter.scrolledtext import ScrolledText
-import pandas
+
 import random
 import main
 import requests

@@ -6,7 +6,7 @@ import time
 from tkinter import *
 from tkinter import simpledialog
 import tkinter.messagebox
-import pandas
+
 import random
 import main
 from pygame import mixer

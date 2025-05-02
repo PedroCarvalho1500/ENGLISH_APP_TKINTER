@@ -1,7 +1,6 @@
 import sqlite3
 import time
 from tkinter import *
-import pandas
 import random
 import grammar
 import vocabulary

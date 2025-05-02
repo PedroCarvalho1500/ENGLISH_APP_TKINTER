@@ -6,7 +6,6 @@ import time
 from tkinter import *
 from tkinter import simpledialog
 import tkinter.messagebox
-import pandas
 import random
 import main
 import phraseSpecific
@@ -14,6 +13,8 @@ import phraseSpecific
 BACKGROUND_COLOR = "black"
 timer = None
 current_french_word = ""
+
+
 
 
 buttons_list = []

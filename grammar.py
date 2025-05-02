@@ -2,7 +2,6 @@ import sqlite3
 import time
 from tkinter import *
 import tkinter.messagebox
-import pandas
 import random
 import main
 

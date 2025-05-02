@@ -4,9 +4,12 @@ import sqlite3
 import time
 from tkinter import *
 import tkinter.messagebox
-import pandas
 import random
 import main
+#Install uninstallable
+#pip install pydub
+#pip install pygame
+#pip install pyaudio
 from pygame import mixer
 from pydub import AudioSegment
 from pydub.playback import play

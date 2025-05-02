@@ -7,7 +7,7 @@ from tkinter import *
 from tkinter import simpledialog
 import tkinter.messagebox
 from tkinter.scrolledtext import ScrolledText
-import pandas
+
 import random
 import main
 from pygame import mixer
