@@ -1,0 +1,253 @@
+id,prep_id,verb_id,meaning
+1,1,1,Make quickly - Whip up a dish
+2,2,1,show/release - He whipped out yesterday
+3,3,1,take off/remove - Whip off your clothes
+4,4,1,Leave - he whipped out to the store
+5,5,1,enter quickly - I whipped into the store and got the potatoes
+6,6,1,read quickly - I whipped through the newspaper this morning
+7,1,2,the opposite of sit down
+8,2,2,"be very noticeable - Due to your results, you 
+stood out from the other candidates"
+9,8,2,wait - I think you are done with your task now. Please stand by
+10,9,2,"support - She is so kind. Even though I've been facing a tough situations, she stands with me"
+11,7,2,"Represents, means something - PC stands for Private Computer"
+12,10,2,look over someone's shoulder - I hate when people stand over me to look at what I'm doing
+13,11,2,"not work - He is so lazy. Instead of doing his tasks, he is standing around"
+14,1,3,make completely full - Our car is running out of gas. Let's fill it up
+15,2,3,"Grow or get larger - My muscles are filling out
+Complete only needed information - Fill out this form"
+16,12,3,Complete information - Usually refers to blank spaces
+17,13,3,have a lot of one thing. As much as possible. I'm filled up on food. Please give it to someone else
+18,14,4,"perform or make progress in a specified way - How're you getting on in your new job?
+enter a vehicle - She got on the train
+Have a good relationship. I heard you two don't get on"
+19,2,4,to leave a place or to escape - Let's get out of the house and play
+20,3,4,to leave a vehicle - We'll get off the bus in the next station
+21,15,4,Have a good relationship - Do you get along with your parents?
+22,16,2,"leave a high position in a company, government, etc"
+23,17,2,"Keep a distance - stand back, don't be so close"
+24,18,5,"To check the status, condition, or well-being of someone or something through an inspection or visit.
+I just checked up on the baby, and he's still sleeping."
+25,5,5,"To voluntarily seek medical care at the hospital (as opposed to being rushed there by ambulance). In this usage, a reflexive pronoun is used between ""check"" and ""into.""
+I'm glad I checked myself into the hospital because the pain turned out to be appendicitis!"
+26,6,5,"o request that one's luggage be sent to one's final destination, as when traveling through multiple cities or via different modes of transportation. In this usage, a noun or pronoun is used between ""check"" and ""through.""
+I don't have any luggage with me because I checked my bags through to Rome."
+27,19,5,"To consult or confer with someone about something.
+I'm the lead person on this campaign, so please check with me before making any big decisions."
+28,3,6,Begin something in a particular way or from a particular point. She started off her speech with a joke
+29,2,6,"Begin a journey, career, or activity. He started out as a teacher before becoming a writer"
+30,1,6,Begin operating. They started up a new company last year
+31,20,6,"Begin to criticize or attack someone, or begin a task. As soon as I got home, my mom started in on me about my messy room"
+32,21,7,Take care of - Can you look after my dog while I'm away?
+33,1,7,"Search for information / imrpove. Things are looking up for our business.
+I need to look up that word in the dictionary"
+34,22,7,Think you are better than someone. She looks down on people who don't have a degree
+35,3,8,"To accompany one to the place where they will be departing and wish them farewell. A noun or pronoun can be used between ""see"" and ""off.""
+John offered to see me off to the train station, but I was so sad to leave that I preferred to go alone."
+36,3,9,"To escape with someone or something that has been stolen, snatched, etc.
+The thieves busted the ATM and made off with the cash inside.
+Sorry, the dog made off with the
+last burger—snatched it
+right from the table."
+37,3,10,"to scold someone; to attack someone verbally. (This has a sense of finality about it.) I was so mad at Bob that I told him off. By the end of the day, I had told off everyone else, too."
+38,3,11,"To eliminate the decimals from a fraction in order to create a whole number, either by moving to the next lowest number when the decimals are less than one half, or moving up the next highest number when the decimals are greater than one half. A noun or pronoun can be used between ""round"" and ""off.""
+Please round off the figures used in your return, as failure to do so may result in delay to it being processed correctly."
+39,3,12,"To be able to perform or complete something, especially in the face of hardships, difficulties, or setbacks. In this usage, a noun or pronoun can be used between ""pull"" and ""off.""
+Congratulations on winning the case! I wasn't sure you'd pull it off.
+If they're able to pull off the merger, they would form the largest single corporation in the world."
+40,3,13,"to give up on someone or something as a dead loss, waste of time, hopeless case, etc. Don't write me off as a has-been. We almost wrote off the investment as a dead loss."
+41,23,14,"To continue with something when there are problems or others wish to stop. E.g: The municipal
+government is pushing ahead with its plans."
+42,24,14,"push someone away -> to force somebody away from you. The relationship wasn't working, so she pushed
+him away"
+43,11,14,Treat someone in a rude way. To act like a bully. E.G: Our boss thinks that he can just push people around
+44,17,14,To delay until a later time. E.g: We pushed our wedding date back
+45,17,14,"To fight against somebody, something. E.g: They pushed back against the enemy"
+46,7,14,To support and advocate for something or someone. E.G: employees pushed for more money
+47,14,14,To continue doing something. E.G: We can't quit. We need to push on
+48,25,14,Someone -> To press roughly into someone as you pass them. E.G: I had to oush past a bunch of people to catch the bus
+49,26,15,"To assume command, control, or responsibility. Sometimes followed by ""from (someone).""
+The police were ordered to stand down until the FBI came to take over.
+We took the project over halfway through its development, so there was a steep learning curve at first."
+50,6,16,"To examine or investigate the contents of something and organize or arrange them in some manner.
+I want you to sort through all the junk in this closet before you go to college and get rid of anything you don't want me to save.
+We spent the night sorting through old photographs my grandmother had left behind."
+51,3,17,"to remove something by applying a sweeping stroke to it or the surface it's on, typically with one's hand. In this usage, a noun or pronoun can be used between ""brush"" and ""off.""
+Be sure to brush off that chair before you sit down."
+52,16,18,"To give something from a higher position to someone at a lower position. Can be used either literally or figuratively.
+While you're up on the roof, would you pass the measuring tape down to me? I left it up there yesterday.
+Due to new regulations passed down to us from our managers, I'm no longer authorized to give refunds for any reason other than defective goods."
+53,2,19,"1. To begin an earnest attempt; undertake: He set out to understand why the plan had failed.
+2. To lay out systematically or graphically: set out a terrace.
+3. To display for exhibition or sale.
+4. To plant: set out seedlings.
+5. To start a journey: She set out at dawn for town."
+54,14,20,"talk in a noisy, excited,
+or declamatory manner"
+55,7,21,"Literally, to seek a particular kind of fish while fishing.
+I heard we're fishing for salmon today.
+A: ""Have you ever fished for halibut?"" B: ""No, what's that like?"""
+56,2,21,"To pull someone or something from a body or container of water, as if by fishing. A noun or pronoun can be used between ""fish"" and ""out.""
+Emergency services had to fish the drunken swimmer out of the freezing river after he started getting into difficulty.
+No, I will not fish out your keys for you. You're the one who dropped them in the toilet!
+A: ""Are you really too squeamish to fish a live lobster out of the tank?"" B: ""Yes!""
+2. To find and retrieve something (from within something else). A noun or pronoun can be used between ""fish"" and ""out.""
+It took me a minute to fish my keys out of my bag."
+57,2,22,"To refuse to do something due to fear (real or perceived).
+Jumping off the high-dive is fun! Don't chicken out!"
+58,19,23,"To attempt to trick or deceive someone; to manipulate or fool someone.
+Listen, pal, don't monkey with me! Either pay your debts on time or we'll have to repossess your home."
+59,2,5,"To be verified as true, accurate, or meeting a certain standard.
+Surprisingly, her story checks out—she really was at the library until midnight last night."
+60,14,24,"To continue for an excessively long time.
+This case has dragged on for months. When will it finally end?
+If this lecture drags on any longer, I'm gonna fall asleep!"
+61,1,25,"To dress formally, perhaps more formally than usual.
+You need to dress up for this event tonight—a suit and tie would be appropriate.
+I dressed up for the birthday party and was embarrassed to find all of the other guests in shorts and T-shirts.
+The chairman of the board will be there tonight, so everyone needs to dress up, OK?
+2. To wear attire that is appropriate for a specific occasion.
+It takes the kids forever to get dressed up for hockey practice, what with all the pads and layers of clothes they need to put on.
+3 - to improve, make something better. "
+62,2,26,"To ask one to go on a date.
+Bill still hasn't asked me out—maybe he doesn't have romantic feelings for me after all.
+A: ""You know, you could always ask him out."" B: ""No way! What if he turns me down?"" A: ""He's probably afraid that you're gonna turn him down!""
+Carrie asked you out? Ooh, that's so exciting!
+2. To invite one to a social event or special occasion.
+I'm sorry, we're busy on Friday night—my boss has asked us out to the theater.
+Russell asked you out to a concert this weekend? Well, that sounds fun!
+They asked us out to dinner on Saturday night. Want to go?"
+63,12,27,"To come or go somewhere for a brief visit or purpose.
+I need to pop in the office to pick up some documents.
+Why don't you pop in for a visit this Saturday?
+2. To put or toss something into something else very quickly, casually, or suddenly. In this usage, a noun or pronoun can be used between ""pop"" and ""in.""
+He popped a mint in his mouth after eating so much garlic.
+If you're going to the mailbox, would you mind popping in this letter for me?"
+64,12,28,"
+To visit someone casually or unexpectedly.
+Drop in whenever you want—I'll be home all day.
+It's too late to drop in on Grandma. We'll go over to her house another day.
+Hey, I have something for you, so drop in when you get a chance."
+65,8,28,"To visit someone at some non-specific time in the future. Often stated as an invitation.
+If you still have questions on the material, why don't you drop by my office sometime, and we'll go over everything step by step.
+Be sure to drop by the next time you're in the area.
+I have something for you, so drop by when you get a chance.
+2. To come over briefly (to someone's location) in order to deliver someone or something. In this usage, a noun or pronoun can be used between ""drop"" and ""by."""
+66,1,29,"To connect two things. In this usage, a noun or pronoun can be used between ""hook"" and ""up.""
+We can hook up your car to my truck to try to jumpstart it.
+Now you just have to hook up the leash and the harness.
+I've never hooked a trailer up to my truck. What do I need to do first?
+2. verb To set up an electronic device or system. In this usage, a noun or pronoun can be used between ""hook"" and ""up.""
+Can you hook up my TV before you leave?
+The kids are gonna mutiny if we don't hook up the WiFi soon.
+I'm trying to hook up the printer, but I can't get it to turn on, which is a problem!
+3. verb To meet with someone in order to spend time with them.
+I hope we'll be able to hook up for coffee or something while you're home for Christmas break.
+"
+67,3,28,"To leave someone or something at the destination to which one has transported it. In this usage, a noun or pronoun can be used between ""drop"" and ""off.""
+When do I need to drop the kids off at soccer practice?
+I'll come to your house tonight and drop off your cake pan.
+Sure, you can borrow my notes. I'll drop them off to you when I get out of my last class.
+2. verb To happen less often than is normal or typical.
+Is Kelly mad at me? We used to talk all the time, but our conversations have really dropped off lately.
+A: ""Is Shelly OK? Her attendance in my classes has really dropped off."" B: ""Oh yeah, I think she has mono.""
+It was painful to watch our texts drop off after we'd broken up.
+3. verb To decline significantly.
+Don't sign that defenseman—his play has really dropped off as he's gotten older.
+That business had to close after sales dropped off sharply.
+People always make New Year's resolutions to go to the gym more, and their workouts always drop off by February.
+4. verb To release someone or something from one's grasp (and let it fall) from a particular place (which is listed after ""off""). In this usage, a noun or pronoun can be used between ""drop"" and ""off.""
+We dropped rocks off the bridge and listened to them splash into the river."
+68,14,15,to accept more work or start a new hobby. The boss asked me to take on the Helen's account
+69,3,30,to delay something to a later date. We will have to put off the meeting
+70,14,30,"Perform for an audience. Wear clothes, hats, etc. Singers put on a show."
+71,12,30,"Spend time. We put in an extra hour at work today.
+Apply for something. She decided to put in for a job as secretary."
+72,3,31,Fade gradually. The excitement of the new game wore off after a few days. 
+73,27,7,To admire. He looks up his grandfather.
+74,2,32,To produce something quickly. The team managed to bash out a rough draft of the projectjust before the deadline.
+75,3,33,"remove, take away, withdraw, take - remove something concrete, as by lifting, pushing, or taking off, or remove something abstract; ""remove a threat""; ""remove a wrapper""; ""Remove the dirty dishes from the table""; ""take the gun from your pocket""; ""This machine withdraws heat from the environment""
+deterge - wipe away; to wash off or out, cleanse; chiefly in medical use: to clear away foul matter from the body; ""This drug is powerful enough to deterge""
+2.	wipe off - remove by or as if by rubbing or erasingwipe off - remove by or as if by rubbing or erasing; ""Please erase the formula on the blackboard--it is wrong!"""
+76,3,34,"To prevent someone or something from advancing or approaching; to keep someone or something at bay. A noun or pronoun can be used between ""hold"" and ""off.""
+We can't hold off the police for much longer—they're going to find us!
+You have to start meeting your minimum monthly repayments if you want to hold your creditors off.
+That preventative course of antibiotics really held off the illness—I was hardly sick at all!
+2. To wait to take action. A noun or pronoun can be used between ""hold"" and ""off.""
+I know you want to start on that project, but hold off until I get these questions answered by the boss."
+77,3,35,"To briefly stop in or visit some place during the course of a journey.
+I thought it was a direct flight to Dublin, but we're actually stopping off in Denver.
+I need to stop off at the grocery store on my way back home."
+78,5,7,To investigate something; check into something: The police looked into the disturbance.
+79,2,31,to become worn from use; to become diminished or useless from use. My car engine is about to wear out. It takes a lot of driving to wear out an engine.
+80,2,36,"1. To remove a shape or figure from something, such as paper, by cutting.
+The kids are busy cutting out paper dolls for a craft project.
+2. To be well-suited for success in a particular area.
+After being out of school for so long, I don't think that I'm cut out for studying any more.
+6. To stop doing something.
+You better cut out these antics before your father gets home.
+To end unexpectedly or abruptly.
+Why does the music cut out at the end of the song like that?"
+81,12,36,"To interrupt a dancing couple in order to change places with one of them (typically the man).
+Oh, don't worry about cutting in—I was tripping all over myself on the dance floor anyway.
+2. To move ahead of someone or something in line before it is one's turn.
+The guy from the back of the line totally just cut in!
+4. To join something despite being unwelcome.
+Ugh, my little brother is always cutting in on my movie nights with my friends."
+82,16,36,"1. Literally, to chop something down, as of a tree. In this usage, a noun or pronoun can be used between ""cut"" and ""down.""
+Unfortunately, we'll have to cut down that old tree because the inspector thinks it could fall on our house in a bad storm.
+4. To reduce something.
+My doctor told me that I need to cut down on eating fried foods in order to improve my cholesterol."
+83,1,36,"1. verb To chop something into smaller pieces. In this usage, a noun or pronoun can be used between ""cut"" and ""up.""
+You need to cut up these onions so we can brown them.
+3. verb To cause someone to laugh. In this usage, a noun or pronoun can be used between ""cut"" and ""up.""
+His remark cut up the rest of the group, but I just didn't think it was funny."
+84,28,36,"1. To travel across some region, rather than around it: We can get to the house faster if we just cut across the front lawn.
+2. To affect or concern a number of different groups of persons or things: The issue of health care cuts across all social classes."
+85,6,36,"1. To slice something and penetrate its surface.
+I don't think that knife is sharp enough to cut through the fruit's tough rind.
+3. To do something in a simple or straightforward way, bypassing a more complex alternative.
+Can you please cut through all this legalese and tell us exactly what the subpoena is saying?
+4. To penetrate and be noticeable amidst something, often noise, confusion, etc.
+Luckily, the gym teacher's whistle cut through the din of yelling children."
+86,5,36,"4. slang To include one in the profits from something, such as a business venture. In this usage, the person being included is typically mentioned between ""cut"" and ""in.""
+They better cut me in on this—I came up with the original concept!"
+87,3,36,"2. verb To abruptly move in front of another driver, either intentionally or unintentionally. In this usage, a noun or pronoun can be used between ""cut"" and ""off.""
+Can you believe that jerk cut me off like that? I nearly hit him!
+"
+88,3,36,"3. verb To interrupt one and stop them from talking. In this usage, a noun or pronoun can be used between ""cut"" and ""off.""
+After my mom had been droning on for nearly five minutes, I just had to cut her off.
+2. verb To abruptly move in front of another driver, either intentionally or unintentionally. In this usage, a noun or pronoun can be used between ""cut"" and ""off.""
+Can you believe that jerk cut me off like that? I nearly hit him!
+5. verb To stop giving money to someone or something. In this usage, a noun or pronoun can be used between ""cut"" and ""off.""
+My parents have threatened to cut me off as soon as I turn 30, so I need to find a job."
+89,3,37,"To complete a task successfully, especially when a positive outcome initially seems or seemed unlikely.
+It's miraculous that we brought the presentation off—we only finished writing it five minutes before walking into the conference room!"
+90,3,38,"To complete or do something successfully, especially when faced with obstacles. A noun or pronoun can be used between ""carry"" and ""off.""
+I never expected to carry off the party once the caterer suddenly quit, but everyone seems to have had a great time!"
+91,3,39,"To succeed.
+After months of planning, the launch came off thrillingly.
+Unfortunately, his research project never came off, so the department shut it down."
+92,14,40,"To become popular or widespread.
+Judging by my students, that obnoxious song is really starting to catch on."
+93,5,41,"To enter some position, role, employment, etc., very easily or casually.
+With that kind of experience and expertise, she'll be able to walk into any engineering job you want."
+94,1,9,"1. verb To compose or constitute.
+Simple syrup is made up of just sugar and water.
+Americans believe that the 50 states make up a union that is greater than the sum of its parts.
+2. verb To contrive something that is not true or real; to fabricate. In this usage, a noun or pronoun can be used between ""make"" and ""up.""
+Julie finally admitted to the principal that her turtle did not eat her homework, and that she had made the whole thing up.
+It turns out that the reporter simply made up the statistics—they had no basis in reality.
+3. verb To create something based on one's imagination. In this usage, a noun or pronoun can be used between ""make"" and ""up.""
+A: ""How did you come up with that character? Is he based on someone you know?"" B: ""No, I just made him up.""
+The chef is known for making up dishes using unusual flavor profiles.
+6. A special examination for a student who has been absent from or has failed a previous examination."
+95,29,9,to fix the relationship
+96,26,9,"1. verb To make changes to something in order to greatly alter or completely change its appearance or function. In this usage, a noun or pronoun can be used between ""make"" and ""over.""
+We're thinking about making over the entire layout of the magazine.
+Our neighbors made over their back yard and it's really impressive."
+97,3,9,"To escape with someone or something that has been stolen, snatched, etc.
+The thieves busted the ATM and made off with the cash inside."
+98,7,9,"1. To move in the direction of some place, often hastily or in order to flee something.
+They made for the storm cellar as quickly as they could."
+99,30,9,2. To consider something to be true of something or someone. Used chiefly as a question or in the passive: What do you make of these little pieces of wood? Not much was made of the evidence they found.
