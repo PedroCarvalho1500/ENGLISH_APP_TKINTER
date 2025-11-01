@@ -1,0 +1,4 @@
+SecretStorage==3.3.1
+selenium==4.31.0
+urllib3==1.26.5
+usb-creator==0.3.7

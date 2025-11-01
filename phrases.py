@@ -53,7 +53,7 @@ class DB_Actions():
         self.connect_db()
 
         #print("GETTING EXAMPLE BY ID -> "+str(id))
-        eg = self.cursor.execute(""" SELECT * FROM verbs""").fetchall()
+        eg = self.cursor.execute(""" SELECT * FROM verbs ORDER BY word""").fetchall()
         self.conn.commit()
 
         self.disconnect_db()
@@ -121,7 +121,7 @@ class Application(ScreenFunctions):
 
 
     def load_buttons(self):
-        x = 0.05
+        x = 0.02
         y = 0.001
         index = 0
         
@@ -134,14 +134,14 @@ class Application(ScreenFunctions):
             self.create_button(folder, self.phrases, folder, 2, "black", ('verdana', 10, 'bold'), 'white' ,'white', str(folder),x,y)
             
             x+=0.07
-            if(x >= 0.85):
-                x = 0.05
-                y+=0.14
+            if(x >= 0.94):
+                x = 0.02
+                y+=0.06
             index+=1
 
         #input(f"CREATING BACK")
         self.bt_main_menu = Button(self.phrases, text="Main Menu", border=2, bg="white", font=('verdana', 10, 'bold'), activebackground='green' ,activeforeground='black', command=lambda: self.openMainPage())
-        self.bt_main_menu.place(relx=0.25,rely=0.86, relwidth=0.4, relheight=0.1)
+        self.bt_main_menu.place(relx=0.25,rely=0.86, relwidth=0.37, relheight=0.1)
         
         #DELETE LINE BELOW IF SOME PROBLEM APPEARS.
         buttons_list.append(self.bt_main_menu)

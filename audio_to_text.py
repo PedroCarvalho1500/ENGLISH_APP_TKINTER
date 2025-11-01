@@ -21,3 +21,7 @@ if transcript.status == aai.TranscriptStatus.error:
     exit(1)
 
 print(transcript.text)
+
+
+#I want a list with LOrd of the Rings characters
+characters = 
