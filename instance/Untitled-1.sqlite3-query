@@ -1,0 +1,7 @@
+-- database: ./english.db
+
+SELECT * FROM verb_prep
+ORDER BY `id` ASC;
+
+
+SELECT * FROM verb_prep WHERE id=92
